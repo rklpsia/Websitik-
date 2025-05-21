@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Список задач</h1>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Новая задача">
+            <input type="text" id="taskDate" class="date-input" placeholder="Срок выполнения">
+            <select id="taskPriority">
+                <option value="Низкий">Низкий</option>
+                <option value="Средний" selected>Средний</option>
+                <option value="Высокий">Высокий</option>
+            </select>
+            <button id="addBtn">Добавить</button>
+        </div>
+        
+        <div class="filter-group">
+            <select id="filterStatus">
+                <option value="all">Все статусы</option>
+                <option value="completed">Завершённые</option>
+                <option value="inprogress">В процессе</option>
+            </select>
+            <select id="filterPriority">
+                <option value="all">Все приоритеты</option>
+                <option value="Низкий">Низкий</option>
+                <option value="Средний">Средний</option>
+                <option value="Высокий">Высокий</option>
+            </select>
+            <input type="date" id="filterDate" placeholder="Фильтр по дате">
+            <button id="filterBtn" class="filter-btn">Фильтровать</button>
+            <button id="resetBtn" class="reset-btn">Сбросить</button>
+        </div>
+        
+        <div class="progress-text" id="progressText">0% завершено (0/0)</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div id="tasksContainer"></div>
+        <div class="task-count" id="taskCount">Всего задач: 0</div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
