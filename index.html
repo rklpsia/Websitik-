@@ -12,14 +12,17 @@
         <div class="input-group">
             <input type="text" id="taskInput" placeholder="Новая задача">
             <input type="text" id="taskDate" class="date-input" placeholder="Срок выполнения">
-            <select id="taskPriority">
-                <option value="Низкий">Низкий</option>
-                <option value="Средний" selected>Средний</option>
-                <option value="Высокий">Высокий</option>
-            </select>
+            <div class="priority-select">
+                <select id="taskPriority" required>
+                    <option value="" disabled selected hidden>Приоритет задачи</option>
+                    <option value="Низкий">Низкий</option>
+                    <option value="Средний">Средний</option>
+                    <option value="Высокий">Высокий</option>
+                </select>
+                <span class="select-arrow"></span>
+            </div>
             <button id="addBtn">Добавить</button>
         </div>
-        
         <div class="filter-group">
             <select id="filterStatus">
                 <option value="all">Все статусы</option>
