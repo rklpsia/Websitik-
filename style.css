@@ -23,6 +23,20 @@ body {
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
+        input[type="text"],
+        input[type="date"],
+        select {
+            flex-grow: 1;
+            min-width: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: white;
+            appearance: auto;
+        }
         .filter-group {
             display: flex;
             gap: 10px;
@@ -31,16 +45,6 @@ body {
             padding: 15px;
             border-radius: 8px;
             flex-wrap: wrap;
-        }
-        input, select, button {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        input[type="text"] {
-            flex-grow: 1;
-            min-width: 200px;
         }
         button {
             background-color:  #2f77ec;
